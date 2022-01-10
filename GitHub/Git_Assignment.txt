@@ -1,0 +1,503 @@
+1: Create a directory 'project_dir' and cd to 'project_dir'.
+
+-> AJPRADHA@LIN24009065 MINGW64 /
+   $ mkdir project_dir
+
+   AJPRADHA@LIN24009065 MINGW64 /
+   $ cd project_dir
+
+   AJPRADHA@LIN24009065 MINGW64 /project_dir
+
+
+
+2: Initialize git version database
+
+-> AJPRADHA@LIN24009065 MINGW64 /project_dir
+$ git init
+hint: Using 'master' as the name for the initial branch. This default branch name
+hint: is subject to change. To configure the initial branch name to use in all
+hint: of your new repositories, which will suppress this warning, call:
+hint:
+hint:   git config --global init.defaultBranch <name>
+hint:
+hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+hint: 'development'. The just-created branch can be renamed via this command:
+hint:
+hint:   git branch -m <name>
+Initialized empty Git repository in C:/Users/AJPRADHA/Downloads/PortableGit/project_dir/.git/
+
+AJPRADHA@LIN24009065 MINGW64 /project_dir (master)
+
+
+
+3: create new file index.html
+
+-> AJPRADHA@LIN24009065 MINGW64 /project_dir (master)
+$ ls
+index.txt
+
+AJPRADHA@LIN24009065 MINGW64 /project_dir (master)
+$ git add index.txt
+
+AJPRADHA@LIN24009065 MINGW64 /project_dir (master)
+$
+
+
+
+4: check the git status. You should find index.html as untracked file.
+-> AJPRADHA@LIN24009065 MINGW64 /project_dir (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        index.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+
+
+
+5: stage the index.html file
+-> AJPRADHA@LIN24009065 MINGW64 /project_dir (master)
+$ git add index.txt
+ 
+
+
+
+6: commit index.html
+-> AJPRADHA@LIN24009065 MINGW64 /project_dir (master)
+$ git commit -m "that's work haa"
+[master 47e484d] that's work haa
+ Committer: PRADHAN <ajay-bramhachari.pradhan@capgemini.com>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 1 insertion(+)
+
+
+7: Make few changes in index.html and create a new file info.txt
+->  touch info.txt
+
+Ans 8: AJPRADHA@LIN24009065 MINGW64 /project_dir (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        info.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+
+Ans 9: AJPRADHA@LIN24009065 MINGW64 /project (master)
+$ touch .gitignore *.txt
+
+
+ 
+
+10:  AJPRADHA@LIN24009065 MINGW64 /project_dir (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   .gitignore
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   .gitignore
+        modified:   index.txt
+
+11: AJPRADHA@LIN24009065 MINGW64 /project_dir (master)
+$ $ git commit -a
+On branch master
+
+Initial commit
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitignore
+        index.txt
+        info.txt
+
+ 
+
+
+12: Type git log
+
+13:  AJPRADHA@LIN24009065 MINGW64 /project_dir (master)
+$ nano index.txt
+
+
+14: get revert head
+
+
+15: AJPRADHA@LIN24009065 MINGW64 /project_dir (master)
+$ cat html.txt
+hii
+good morning
+
+
+AJPRADHA@LIN24009065 MINGW64 /project_dir (master)
+$ git checkout -- html.txt
+
+AJPRADHA@LIN24009065 MINGW64 /project_dir (master)
+$ cat html.txt
+hii
+AJPRADHA@LIN24009065 MINGW64 /project_dir (master)
+$
+
+
+16:  
+AJPRADHA@LIN24009065 MINGW64 /project_dir (master)
+$ git add aj.txt
+
+AJPRADHA@LIN24009065 MINGW64 /project_dir (master)
+$ nano aj.txt
+
+AJPRADHA@LIN24009065 MINGW64 /project_dir (master)
+$ cat aj.txt
+hii
+
+
+17:  AJPRADHA@LIN24009065 MINGW64 /project_dir (master)
+$ git add index.txt
+
+
+18: git revert head
+
+19: AJPRADHA@LIN24009065 MINGW64 /project (master)
+$ git config --global alias.my-add add
+
+20:  git commit -m "this is aj"
+[master (root-commit) 31bd7b3] this is aj
+ Committer: Ajayp632 <ajay-bramhachari.pradhan@capgemini.com>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 1 insertion(+)
+ create mode 100644 index.txt
+
+21: git revert head
+
+GIT BRANCHING
+
+21:22: AJPRADHA@LIN24009065 MINGW64 /
+$ mkdir Assignments
+
+AJPRADHA@LIN24009065 MINGW64 /
+$ cd Assignments
+
+AJPRADHA@LIN24009065 MINGW64 /Assignments
+$
+
+23: AJPRADHA@LIN24009065 MINGW64 /Assignments
+$ touch README.txt
+
+AJPRADHA@LIN24009065 MINGW64 /Assignments
+$ nano Assignments
+
+AJPRADHA@LIN24009065 MINGW64 /Assignments
+$ cat Assignments
+Assignment 1: What is github
+Assignment 2: How to install it
+
+24: AJPRADHA@LIN24009065 MINGW64 /assignments1 (master)
+$ git commit -m "This is assignment 1"
+[master (root-commit) 8171a6e] This is assignment 1
+ Committer: Ajayp632 <ajay-bramhachari.pradhan@capgemini.com>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 1 insertion(+)
+ create mode 100644 README.txt
+
+
+25: AJPRADHA@LIN24009065 MINGW64 /assignments1 (master)
+$ git branch html_assignments
+
+AJPRADHA@LIN24009065 MINGW64 /assignments1 (master)
+$ git branch --list
+  ajay
+  html_assignments
+* master
+
+
+26: AJPRADHA@LIN24009065 MINGW64 /assignments1 (master)
+$ git checkout html_assignments
+Switched to branch 'html_assignments'
+
+AJPRADHA@LIN24009065 MINGW64 /assignments1 (html_assignments)
+$
+
+
+27: AJPRADHA@LIN24009065 MINGW64 /assignments1 (html_assignments)
+$ git checkout master
+Switched to branch 'master'
+
+AJPRADHA@LIN24009065 MINGW64 /assignments1 (master)
+$ git merge html_assignments
+Already up to date.
+
+AJPRADHA@LIN24009065 MINGW64 /assignments1 (master)
+$
+
+
+28:  AJPRADHA@LIN24009065 MINGW64 /assignments1 (html_assignments)
+$ git commit -m "adding html assignments into html_assignments branch"
+[html_assignments b044ad3] adding html assignments into html_assignments branch
+ Committer: Ajayp632 <ajay-bramhachari.pradhan@capgemini.com>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 1 insertion(+)
+ create mode 160000 Demo
+
+AJPRADHA@LIN24009065 MINGW64 /assignments1 (html_assignments)
+$
+
+
+29:  
+
+31:  AJPRADHA@LIN24009065 MINGW64 /assignments1 (html_assignments)
+$ git checkout master
+warning: unable to rmdir 'Demo': Directory not empty
+Switched to branch 'master'
+
+AJPRADHA@LIN24009065 MINGW64 /assignments1 (master)
+
+
+32:  AJPRADHA@LIN24009065 MINGW64 /assignments1 (master)
+$ git commit -m "threre is some changes"
+[master f169d0a] threre is some changes
+ Committer: Ajayp632 <ajay-bramhachari.pradhan@capgemini.com>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+33:  AJPRADHA@LIN24009065 MINGW64 /assignments1 (master)
+$ git checkout html_assignments
+Switched to branch 'html_assignments'
+
+AJPRADHA@LIN24009065 MINGW64 /assignments1 (html_assignments)
+$
+
+
+34:  35:   AJPRADHA@LIN24009065 MINGW64 /assignments1 (html_assignments)
+$ touch aj1.txt
+
+AJPRADHA@LIN24009065 MINGW64 /assignments1 (html_assignments)
+$ git status
+On branch html_assignments
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        aj1.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+AJPRADHA@LIN24009065 MINGW64 /assignments1 (html_assignments)
+$ git add aj1.txt
+
+AJPRADHA@LIN24009065 MINGW64 /assignments1 (html_assignments)
+$ git commit -m "threre is some changes again"
+[html_assignments cefc8eb] threre is some changes again
+ Committer: Ajayp632 <ajay-bramhachari.pradhan@capgemini.com>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 aj1.txt
+
+
+36: AJPRADHA@LIN24009065 MINGW64 /assignments1 (html_assignments)
+$ git checkout master
+warning: unable to rmdir 'Demo': Directory not empty
+Switched to branch 'master'
+
+AJPRADHA@LIN24009065 MINGW64 /assignments1 (master)
+
+37:  git merge html_assignments
+
+38:  $ git branch -d html_assignments
+
+
+SECTION 2
+
+1: git branch -c css_assignments
+
+2:git checkout css_assignments 
+
+3:4: git commit -m "adding css assignments into css_assignments branch"
+
+5: 6: AJPRADHA@LIN24009065 MINGW64 /assignments1 (css_assignments)
+$ touch aj1.txt
+
+AJPRADHA@LIN24009065 MINGW64 /assignments1 (css_assignments)
+$ git status
+On branch css_assignments
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        aj1.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+AJPRADHA@LIN24009065 MINGW64 /assignments1 (css_assignments)
+$ git add aj1.txt
+
+AJPRADHA@LIN24009065 MINGW64 /assignments1 (css_assignments)
+$ git commit -m "threre is some changes again"
+[css_assignments cefc8eb] threre is some changes again
+ Committer: Ajayp632 <ajay-bramhachari.pradhan@capgemini.com>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 aj1.txt 
+
+7: git checkout master
+
+8: using text editor
+
+9: git checkout css_assignments
+
+10:11: git commit -m "Good evening"
+
+12: git checkout master.
+
+13:  git merge css_assignments
+
+14:  $ git branch -d css_assignments
+
+SECTION3
+
+1: git branch -c js-assignments
+
+2:git checkout js-assignments 
+
+3:4: git commit -m "adding js assignments into js-assignments branch"
+
+5: 6: AJPRADHA@LIN24009065 MINGW64 /assignments1 (js-assignments)
+$ touch aj1.txt
+
+AJPRADHA@LIN24009065 MINGW64 /assignments1 (js-assignments)
+$ git status
+On branch js-assignments
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        aj1.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+AJPRADHA@LIN24009065 MINGW64 /assignments1 (js-assignments)
+$ git add aj1.txt
+
+AJPRADHA@LIN24009065 MINGW64 /assignments1 (js-assignments)
+$ git commit -m "threre is some changes again"
+[js-assignments cefc8eb] threre is some changes again
+ Committer: Ajayp632 <ajay-bramhachari.pradhan@capgemini.com>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 aj1.txt 
+
+7: git checkout master
+
+8: using text editor
+
+9: git checkout js-assignments
+
+10:11: git commit -m "Good evening"
+
+12: git checkout master.
+
+13:  git merge cjs-assignments
+
+14:  $ git branch -d js-assignments
+
+SECTION 3
+
+40: Account created
+
+41: logged in
+
+42: New repo also created.
+
+43: Pushing file ino github done.
+
+SECTION 4
+
+1: 
+
